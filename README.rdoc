@@ -1,28 +1,7 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ruby Version: 2.2.2
+Rails Version: 4.2.1
 
-Things you may want to cover:
+This is a Ruby on Rails version of the webapp LibreLoan, created by @MattMatero and @MikeVessia. This was done solely by @MattMatero to get a working prototype of LibreLoan off the ground before beginning work on the real product.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.

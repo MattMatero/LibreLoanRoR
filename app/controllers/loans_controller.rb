@@ -1,7 +1,5 @@
 class LoansController < ApplicationController
 
-
-
   def index
     if !current_user.nil?
       @loans = Loan.where(owner_id: current_user.id)
