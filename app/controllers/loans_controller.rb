@@ -33,6 +33,15 @@ class LoansController < ApplicationController
     @loan = Loan.find(params[:id])
   end
 
+  def destroy
+    @loan = Loan.find(params[:id])
+    @loan.destroy
+    respond_to do |format|
+      format.html{redirect_to home_profile_path, notice: 'Loan successfully ended'}
+      format.json{head :no_content}
+    end
+  end
+
 
   private
 
