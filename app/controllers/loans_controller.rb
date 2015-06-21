@@ -1,5 +1,15 @@
 class LoansController < ApplicationController
 
+
+
+  def index
+    if !current_user.nil?
+      @loans = Loan.where(owner_id: current_user.id)
+    else
+      redirect_to root_path, alert: "Please Log In"
+    end
+  end
+
   def new
     @loan = Loan.new
   end
@@ -17,6 +27,10 @@ class LoansController < ApplicationController
         format.json {render json: @loan.errors, status: :unprocessable_entity}
       end
     end
+  end
+
+  def show
+    @loan = Loan.find(params[:id])
   end
 
 
