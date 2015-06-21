@@ -1,0 +1,15 @@
+<%= form_for @loan, :html => {:class => 'form-group'} do |f|  %>
+    
+  <%= f.label :book_name, class: 'col-sm-2 control-label' %> 
+  <div class="col-sm-10">
+    <%= f.text_field :book_id, class: 'form-control' %>
+  </div>
+
+   <%= f.label :borrower_Email, class: 'col-sm-2 control-label' %> 
+  <div class="col-sm-10">
+    <%= f.text_field :borrow_id, class: 'form-control' %>
+  </div>
+  
+  <br/>
+  <%= f.submit 'Loan book' , class: 'btn btn-primary' %>
+<% end %>
