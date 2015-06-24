@@ -2,11 +2,13 @@
   <tr>
     <th>Book Name</th>
     <th>Borrower's Email</th>
+    <th>Update</th>
   </tr>
   <% @loans.each do |loan| %>
   <tr>
     <td><%= loan.book_id %></td>
     <td><%= loan.borrow_id %></td>
+    <td><%= link_to 'Received Back', loan_path(loan), :method => 'delete' %></td>
   </tr>
   <% end %>
 </table>

@@ -10,6 +10,7 @@ class LoansController < ApplicationController
 
   def new
     @loan = Loan.new
+    @loan.book_id = params[:Book][:book_id]
   end
 
   def create
@@ -28,14 +29,20 @@ class LoansController < ApplicationController
   end
 
   def show
-    @loan = Loan.find(params[:id])
+    begin
+      @loan = Loan.find(params[:id])
+    rescue Exception => e
+      redirect_to home_profile_path
+    end
   end
 
   def destroy
     @loan = Loan.find(params[:id])
     @loan.destroy
+    session[:return_to] ||= request.referer
+
     respond_to do |format|
-      format.html{redirect_to home_profile_path, notice: 'Loan successfully ended'}
+      format.html{redirect_to session.delete(:return_to), notice: 'Loan successfully ended'}
       format.json{head :no_content}
     end
   end
@@ -44,6 +51,6 @@ class LoansController < ApplicationController
   private
 
   def loan_params
-    params.require(:loan).permit(:book_id,:borrow_id)
+    params.require(:loan).permit(:Book,:book_id,:borrow_id)
   end
 end
