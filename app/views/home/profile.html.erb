@@ -16,7 +16,10 @@
     </div>
 
     <div role="tabpanel" class="tab-pane" id="messages">
-      
+      <div>
+        <%= link_to 'Send new Msg', new_message_path %>
+      </div>
+      <%= render 'home/messagetable.html.erb' %>
     </div>
     <div role="tabpanel" class="tab-pane" id="settings">
       set

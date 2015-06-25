@@ -1,0 +1,10 @@
+<h1>SHOWING MESSAGE <%= @msg.id %> </h1>
+
+<div id="content">
+  <%= @msg.content %>
+</div>
+
+<div id="reply">
+  <%= link_to 'Reply to message', reply_message_path(:Msg => {:sender_id => @msg.sender_id}) %>
+</div>
+

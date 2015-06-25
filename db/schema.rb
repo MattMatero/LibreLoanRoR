@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150621195109) do
+ActiveRecord::Schema.define(version: 20150625030404) do
 
   create_table "books", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -29,6 +29,15 @@ ActiveRecord::Schema.define(version: 20150621195109) do
     t.string   "borrow_id",  limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.string   "sender_id",   limit: 255
+    t.string   "receiver_id", limit: 255
+    t.text     "content",     limit: 65535
+    t.datetime "created_at",                                null: false
+    t.datetime "updated_at",                                null: false
+    t.boolean  "read",        limit: 1,     default: false
   end
 
   create_table "users", force: :cascade do |t|

@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   
   resources :books
   resources :loans
+  resources :messages do
+    get 'reply', :on => :member
+  end
 
   get 'home/profile'
+  
 end

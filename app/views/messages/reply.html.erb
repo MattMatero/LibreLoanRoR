@@ -1,0 +1,23 @@
+<h1>Replying...</h1>
+
+<%= form_for @msg, :html => {:class => 'form-group'} do |f|  %>
+    
+  <%= f.label :receiver_id, class: 'col-sm-2 control-label' %> 
+  <div class="col-sm-10">
+    <%= f.text_field :receiver_id, class: 'form-control', :readonly => true%>
+  </div>
+
+  <%= f.label :sender_id, class: 'col-sm-2 control-label' %> 
+  <div class="col-sm-10">
+    <%= f.text_field :sender_id, class: 'form-control', 
+    :value => @msg.sender_id, :readonly => true %>
+  </div>
+
+ <%= f.label :content, class: 'col-sm-2 control-label' %>
+  <div class="col-sm-10"> 
+    <%= f.text_area :content, :rows => 3, class: 'form-control' %>
+  </div>
+  
+  <br/>
+  <%= f.submit 'Send Message' , class: 'btn btn-primary' %>
+<% end %>
