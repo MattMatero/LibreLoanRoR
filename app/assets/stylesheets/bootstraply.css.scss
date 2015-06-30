@@ -1,0 +1,34 @@
+.navbar-default{
+  background-color: #C1CACA;
+  opacity: .75;
+
+  .navbar-brand{
+    color: #5C12EE;
+  }
+
+  .navbar-brand:hover{
+    color: #FF00EE;
+  }
+}
+
+.navbar-default .navbar-collapse{
+  .dropdown-toggle{
+    color: #5C12EE;
+  }
+
+  .dropdown-menu *{
+    color: #FF0000;
+  }
+
+  .navbar-right *{
+    color: #5C12EE;
+  }
+}
+
+.table-striped > tbody > tr:nth-child(2n+1) > td{
+  background-color: gray;
+}
+
+.table-striped > tbody > tr:nth-child(2n) > td{
+  background-color: white;
+}

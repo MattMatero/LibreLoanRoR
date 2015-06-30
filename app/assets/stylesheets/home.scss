@@ -1,3 +1,36 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+  text-size: 16px;
+}
+
+#banner{
+  text-align: center;
+}
+
+#banner h1 {
+  margin: 0 auto 0 auto;
+  display: inline-block;
+  color: #5C12EE;
+  text-shadow: .0416667em .083333em #000000;
+  text-align: center;
+  width: 5.091667em;
+  overflow: hidden;
+  border-bottom: 2px solid;
+}
+
+.rotateRight{
+  -ms-transform: rotate(25deg);
+  -website-transform: rotate(25deg);
+  transform: rotate(25deg);
+}
+
+.rotateLeft{
+  -ms-transform: rotate(-25deg);
+  -website-transform: rotate(-25deg);
+  transform: rotate(-25deg);
+}
+
+
