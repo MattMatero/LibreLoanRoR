@@ -15,7 +15,15 @@
   text-align: center;
   width: 5.091667em;
   overflow: hidden;
-  border-bottom: 2px solid;
+  border-bottom: .083333em solid;
+}
+
+#profileHeader h1{
+  display: inline;
+}
+
+#profileHeader a{
+  margin-bottom: 20px;
 }
 
 .rotateRight{

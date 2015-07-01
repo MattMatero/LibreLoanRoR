@@ -1,5 +1,7 @@
-<h1><%= current_user.email %>'s profile</h1>
-
+<div id="profileHeader">
+  <h1><%= current_user.email %>'s profile</h1>
+  <%= link_to 'Send Message', new_message_path, :class => 'btn btn-primary' %>
+</div>
 <div>
 
   <!-- Nav tabs -->
