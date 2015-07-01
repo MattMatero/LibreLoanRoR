@@ -7,4 +7,6 @@
 <div id="reply">
   <%= link_to 'Reply to message', reply_message_path(:Msg => {:sender_id => @msg.sender_id}) %>
 </div>
-
+<div id="msgBack">
+  <%= link_to 'Back to messages', home_profile_path %>
+</div>

@@ -1,5 +1,7 @@
 <h1>Replying...</h1>
 
+
+
 <%= form_for @msg, :html => {:class => 'form-group'} do |f|  %>
     
   <%= f.label :receiver_id, class: 'col-sm-2 control-label' %> 
@@ -18,6 +20,9 @@
     <%= f.text_area :content, :rows => 3, class: 'form-control' %>
   </div>
   
-  <br/>
-  <%= f.submit 'Send Message' , class: 'btn btn-primary' %>
+  
+  <div id="replyActions">
+    <%= f.submit 'Send Message' , class: 'btn btn-primary' %>
+    <%= link_to 'Back to messages', home_profile_path, class: 'cancelBtn' %>
+  </div>
 <% end %>
