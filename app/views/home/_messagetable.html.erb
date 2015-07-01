@@ -1,4 +1,4 @@
-<% @messages = Message.userMessages(current_user.email) %>
+<% @messages = Message.userMessages(@user.username) %>
        <table class="table table-striped table-bordered">
         <tr>
         <th>From</th>

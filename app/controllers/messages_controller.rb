@@ -8,7 +8,7 @@ class MessagesController < ApplicationController
 
   def new
     @msg = Message.new
-    @msg.sender_id = current_user.email
+    @msg.sender_id = current_user.username
   end
 
   def create

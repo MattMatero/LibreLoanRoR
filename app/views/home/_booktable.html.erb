@@ -5,7 +5,7 @@
         <th>Book on Loan?</th>
         <th>Loan Book</th>
         </tr>
-        <% @books = Book.userBooks(current_user) %>
+        <% @books = Book.userBooks(@user) %>
         <%= div_for(@books) do |book|%>
         <tr>
           <td><%= book.name %></td>

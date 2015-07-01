@@ -10,5 +10,7 @@ Rails.application.routes.draw do
   end
 
   get 'home/profile'
+
+  get 'home/profile/:name', to: 'home#profile'
   
 end
