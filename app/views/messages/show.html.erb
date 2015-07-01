@@ -1,12 +1,14 @@
-<h1>SHOWING MESSAGE <%= @msg.id %> </h1>
+<h1>Message from: <%= @msg.sender_id %> </h1>
 
 <div id="content">
-  <%= @msg.content %>
+  <p>
+    <%= @msg.content %>
+  </p>
 </div>
 
-<div id="reply">
-  <%= link_to 'Reply to message', reply_message_path(:Msg => {:sender_id => @msg.sender_id}) %>
-</div>
-<div id="msgBack">
-  <%= link_to 'Back to messages', home_profile_path %>
+<div id="replyActions">
+  <%= link_to 'Reply to message',
+  reply_message_path(:Msg => {:sender_id => @msg.sender_id}),
+  :class => 'btn btn-primary' %>
+  <%= link_to 'Back to messages', home_profile_path, :class => 'cancelBtn' %>
 </div>

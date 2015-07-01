@@ -1,6 +1,7 @@
 .navbar-default{
   background-color: #C1CACA;
   opacity: .75;
+  z-index: 1;
 
   .navbar-brand{
     color: #5C12EE;
@@ -14,10 +15,12 @@
 .navbar-default .navbar-collapse{
   .dropdown-toggle{
     color: #5C12EE;
+    
   }
 
   .dropdown-menu *{
     color: #FF0000;
+    z-index: 9999999;
   }
 
   .navbar-right *{

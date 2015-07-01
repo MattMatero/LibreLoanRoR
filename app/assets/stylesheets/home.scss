@@ -2,9 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body{
-  text-size: 16px;
-}
 
 #banner{
   text-align: center;
@@ -14,7 +11,7 @@ body{
   margin: 0 auto 0 auto;
   display: inline-block;
   color: #5C12EE;
-  text-shadow: .0416667em .083333em #000000;
+  text-shadow: .0416667em .083333em #DDDDDD;
   text-align: center;
   width: 5.091667em;
   overflow: hidden;

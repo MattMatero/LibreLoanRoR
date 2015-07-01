@@ -19,5 +19,9 @@
   </div>
   
   <br/>
-  <%= f.submit 'Send Message' , class: 'btn btn-primary' %>
+
+  <div id="replyActions">
+    <%= f.submit 'Send Message' , class: 'btn btn-primary' %>
+    <%= link_to 'Back to messages', home_profile_path, class: 'cancelBtn' %>
+  </div>
 <% end %>

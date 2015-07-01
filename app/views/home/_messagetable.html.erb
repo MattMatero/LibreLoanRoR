@@ -6,9 +6,12 @@
         </tr>
         <%= div_for(@messages) do |msg| %>
         <tr>
-          <td><div><%= msg.sender_id %><div><%= Message.read(msg.id) %>
+          <td><div><%= msg.sender_id %></div><%= Message.read(msg.id) %>
             <%= link_to 'Delete', message_path(msg), :method => 'delete' %></td>
-          <td><%= link_to msg.content[0...50], message_path(msg) %></td>
+          <td><%= msg.content[0...50] %>
+            <br/>
+            <%= link_to 'Read Msg', message_path(msg) %>
+          </td>
         </tr>
         <% end %>
       </table>

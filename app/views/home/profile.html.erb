@@ -17,7 +17,7 @@
 
     <div role="tabpanel" class="tab-pane" id="messages">
       <div>
-        <h5><%= link_to 'Send new Msg', new_message_path %></h5>
+        <h5><%= link_to 'Send new Msg', new_message_path, :class => 'btn btn-primary' %></h5>
       </div>
       <%= render 'home/messagetable.html.erb' %>
     </div>
