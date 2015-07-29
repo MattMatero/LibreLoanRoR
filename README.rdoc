@@ -5,3 +5,8 @@ Rails Version: 4.2.1
 
 This is a Ruby on Rails version of the webapp LibreLoan, created by @MattMatero. It aims to be a 'social network' for readers who never have enough books to read! By making an account you can lend and borrow books from other users. We keep track of who has your books so you won't have to remember. Simply 1-click loan and the system keeps track for you. Never forget which of your friends has your copy of 'Introduction to Algorithms' ever again!
 
+
+#TODO:
+1. Add in access control for viewing other accounts
+2. Set up ActiveAdmin for easy admin controls/data visualization 
+
